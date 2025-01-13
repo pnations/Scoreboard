@@ -18,10 +18,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Ensure content stays in bounds */
 }
+
 
 #container {
     width: 100%;
@@ -50,6 +54,7 @@ body {
     width: 150px;
     color: #F94F6D;
     height: 120px;
+
 }
 
 .score-btn {
@@ -64,12 +69,13 @@ body {
     width: 45px;
     cursor: pointer;
     margin-right: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 #newGame-btn {
     margin-top: 3rem;
-    padding: 12px 24px; 
-    font-size: 1rem;
+    padding: 10px 20px; 
+    font-size: .8rem;
     font-weight: bold;
     background-color: #F94F6D;
     color: #FFFFFF;
@@ -80,6 +86,7 @@ body {
     cursor: pointer;
     z-index: 1000; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    border: 1px solid #fff;
 }
 
 #newGame-btn:hover {
@@ -100,17 +107,37 @@ body {
     text-shadow: 2px 2px 2px #000;
 }
 
+@media screen and (max-width: 540px) {
+    #newGame-btn {
+        margin: 2rem auto;
+        width: 90%;
+    }
+}
+
 @media screen and (min-width: 540px) {
     #container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        max-height: 100vh;
     }
     
     #newGame-btn {
-        margin: auto;
-        padding: 10px 20px;
+        margin: auto 0;
+        padding: 8px 16px;
     }
 }
 
+@media screen and (min-width: 250px) {
+    #container {
+        max-height: 100vh;
+        overflow: auto;
+        }
+        
+        #newGame-btn {
+            max-width: 185px;
+            padding: 14px 16px;
+
+        }
+        }

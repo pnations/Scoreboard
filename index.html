@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="container">
+        <section class="team home">
+            <input id="homeName" class="team-name" value="Home" />
+            <div id="homeScore" class="score">0</div>
+            <div class="buttons">
+                <button class="score-btn" onclick="addPoints('home', 1)" aria-label="Add 1 point to Home">+1</button>
+                <button class="score-btn" onclick="addPoints('home', 2)" aria-label="Add 2 points to Home">+2</button>
+                <button class="score-btn" onclick="addPoints('home', 3)" aria-label="Add 3 points to Home">+3</button>
+            </div>
+        </section>
+        <section class="team guest">
+            <input id="guestName" class="team-name" value="Guest" />
+            <div id="guestScore" class="score">0</div>
+            <div class="buttons">
+                <button class="score-btn" onclick="addPoints('guest', 1)" aria-label="Add 1 point to Guest">+1</button>
+                <button class="score-btn" onclick="addPoints('guest', 2)" aria-label="Add 2 points to Guest">+2</button>
+                <button class="score-btn" onclick="addPoints('guest', 3)" aria-label="Add 3 points to Guest">+3</button>
+            </div>
+        </section>
+        <button id="newGame-btn" onclick="reset()">New Game</button>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

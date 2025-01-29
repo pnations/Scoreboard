@@ -1,4 +1,4 @@
-# Mobile Baseketball Scoreboard
+# Mobile Basketball Scoreboard
 
 A simple and responsive basketball scoreboard web application built using **HTML**, **CSS**, and **JavaScript**. This app allows users to keep track of scores for two teams in a basketball game.
 
